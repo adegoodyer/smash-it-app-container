@@ -57,7 +57,7 @@ def date():
     return datetime.today().strftime("%m-%d-%Y")
 
 
-if __name__ == "smash_it_container.app":
+if __name__ == "smashed_it_test_app.app":
     # create db
     db.create_all()
 
