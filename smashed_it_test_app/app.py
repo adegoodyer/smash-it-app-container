@@ -8,9 +8,9 @@ load_dotenv()
 
 app = Flask(__name__)
 
-
 # configure sqlite DB
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite3"
+
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
@@ -57,7 +57,7 @@ def date():
     return datetime.today().strftime("%m-%d-%Y")
 
 
-if __name__ == "app":
+if __name__ == "smash_it_container.app":
     # create db
     db.create_all()
 

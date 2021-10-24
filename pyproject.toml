@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "flask-todo"
+name = "smashed-it-test-app"
 version = "0.1.0"
 description = ""
 authors = ["Adrian Goodyer <adriangoodyer@gmail.com>"]
