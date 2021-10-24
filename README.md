@@ -11,7 +11,7 @@
 ## Docker
 ```bash
 # get container
-podman pull adriangoodyer/smashed-it-test-app
+podman pull adegoodyer/smashed-it-test-app:latest
 
 # run locally
 podman run -d --rm -p 8080:5000 --network bridge adegoodyer/smashed-it-test-app
