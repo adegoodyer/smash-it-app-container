@@ -1,16 +1,17 @@
 FROM python:3.7
 
 RUN mkdir /app
-COPY /smashed-it-test-app /app
-COPY pyproject.toml /app
+COPY /smashed_it_test_app /app
 WORKDIR /app
 
 ENV PYTHONPATH=${PYTHONPATH}:${PWD}
-ENV FLASK_APP=smash_it_container/app.py
+ENV FLASK_APP=smashed_it_test_app/app.py
 ENV FLASK_ENV=production
 
-RUN pip3 install poetry
-RUN poetry config virtualenvs.create false
-RUN poetry install --no-dev
+RUN pip3 install -r requirements.txt
 
-RUN flask run
+EXPOSE 5000
+
+# test server only accessible locally
+# --host-0.0.0.0 allows public access
+ENTRYPOINT [ "flask", "run" , "--host=0.0.0.0"]
