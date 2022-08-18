@@ -56,8 +56,7 @@ def delete(todo_id):
 def date():
     return datetime.today().strftime("%m-%d-%Y")
 
-
-if __name__ == "smashed_it_test_app.app":
+if __name__ == "__main__":
     # create db
     db.create_all()
 
