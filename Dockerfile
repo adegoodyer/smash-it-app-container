@@ -1,4 +1,4 @@
-FROM python:3.10.7-slim
+FROM python:3.12.0b4-slim
 
 RUN mkdir /app
 COPY /smashed_it_test_app /app
