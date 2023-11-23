@@ -1,4 +1,4 @@
-FROM python:3.10.7-slim
+FROM python:slim-bookworm
 
 RUN mkdir /app
 COPY /smashed_it_test_app /app
